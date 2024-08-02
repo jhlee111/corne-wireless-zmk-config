@@ -24,10 +24,10 @@
         MEDIA {
             display-name = "Media";
             bindings = <
-&none  &bootloader  &u_to_U_TAP  &u_to_U_EXTRA  &u_to_U_BASE   &none    &rgb_ug RGB_TOG    &rgb_ug RGB_EFF  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &bt BT_CLR
-&none  &kp LGUI     &kp LALT     &kp LCTRL      &kp LSHFT      &none    &ext_power EP_TOG  &kp C_PREV       &kp C_VOL_DN     &kp C_VOL_UP     &kp C_NEXT       &none
-&none  &none        &kp RALT     &u_to_U_FUN    &u_to_U_MEDIA  &none    &u_out_tog         &u_bt_sel_0      &u_bt_sel_1      &u_bt_sel_2      &u_bt_sel_3      &none
-                                 &none          &none          &none    &kp C_STOP         &kp C_PP         &kp C_MUTE
+&bt BT_CLR_ALL  &bootloader  &u_to_U_TAP  &u_to_U_EXTRA  &u_to_U_BASE   &none    &rgb_ug RGB_TOG    &rgb_ug RGB_EFF  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &bt BT_CLR
+&none           &kp LGUI     &kp LALT     &kp LCTRL      &kp LSHFT      &none    &ext_power EP_TOG  &kp C_PREV       &kp C_VOL_DN     &kp C_VOL_UP     &kp C_NEXT       &none
+&none           &none        &kp RALT     &u_to_U_FUN    &u_to_U_MEDIA  &none    &u_out_tog         &u_bt_sel_0      &u_bt_sel_1      &u_bt_sel_2      &u_bt_sel_3      &none
+                                          &none          &none          &none    &kp C_STOP         &kp C_PP         &kp C_MUTE
             >;
         };
 

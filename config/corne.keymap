@@ -14,9 +14,9 @@
         BASE {
             display-name = "Base";
             bindings = <
-&kp ESCAPE  &kp Q         &kp W         &kp E          &kp R          &kp T            &kp Y          &kp U          &kp I          &kp O           &kp P           &none
-&kp F13     &u_mt LGUI A  &u_mt LALT S  &u_mt LCTRL D  &u_mt LSHFT F  &kp G            &kp H          &u_mt LSHFT J  &u_mt LCTRL K  &u_mt LALT L    &u_mt LGUI SQT  &none
-&none       &u_lt 6 Z     &u_mt RALT X  &kp C          &kp V          &kp B            &kp N          &kp M          &kp COMMA      &u_mt RALT DOT  &u_lt 6 SLASH   &none
+&kp ESCAPE  &kp Q         &kp W         &kp E          &kp R          &kp T            &kp Y          &kp U          &kp I          &kp O         &kp P            &none
+&kp F13     &u_mt LGUI A  &u_mt LALT S  &u_mt LCTRL D  &u_mt LSHFT F  &kp G            &kp H          &u_mt LSHFT J  &u_mt LCTRL K  &u_mt LALT L  &u_mt LGUI SEMI  &kp SINGLE_QUOTE
+&none       &kp Z         &kp X         &kp C          &kp V          &kp B            &kp N          &kp M          &kp COMMA      &kp DOT       &kp SLASH        &none
                                         &u_lt 1 ESC    &u_lt 2 TAB    &u_lt 3 ENTER    &u_lt 4 SPACE  &u_lt 5 BSPC   &u_lt 6 DEL
             >;
         };
@@ -24,40 +24,42 @@
         MEDIA {
             display-name = "Media";
             bindings = <
-&bt BT_CLR_ALL  &bootloader  &u_to_U_TAP  &u_to_U_EXTRA  &u_to_U_BASE   &none    &rgb_ug RGB_TOG    &rgb_ug RGB_EFF  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &bt BT_CLR
-&none           &kp LGUI     &kp LALT     &kp LCTRL      &kp LSHFT      &none    &ext_power EP_TOG  &kp C_PREV       &kp C_VOL_DN     &kp C_VOL_UP     &kp C_NEXT       &none
-&none           &none        &kp RALT     &u_to_U_FUN    &u_to_U_MEDIA  &none    &u_out_tog         &u_bt_sel_0      &u_bt_sel_1      &u_bt_sel_2      &u_bt_sel_3      &none
-                                          &none          &none          &none    &kp C_STOP         &kp C_PP         &kp C_MUTE
+&none  &none         &none         &none         &none         &none           &rgb_ug RGB_TOG    &rgb_ug RGB_EFF  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &bt BT_CLR
+&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &ext_power EP_TOG  &kp C_PREV       &kp C_VOL_DN     &kp C_VOL_UP     &kp C_NEXT       &bt BT_CLR_ALL
+&none  &u_out_tog    &none         &none         &none         &none           &u_out_tog         &none            &none            &none            &none            &none
+                                   &none         &none         &none           &kp C_STOP         &kp C_PP         &kp C_MUTE
             >;
+
+            label = "MEDIA";
         };
 
         NAV {
             display-name = "Nav";
             bindings = <
-&none  &bootloader  &u_to_U_TAP  &u_to_U_EXTRA  &u_to_U_BASE  &none    &none           &none          &none        &none      &none         &none
-&none  &kp LGUI     &kp LALT     &kp LCTRL      &kp LSHFT     &none    &kp LEFT_ARROW  &kp DOWN       &kp UP       &kp RIGHT  &kp CAPSLOCK  &none
-&none  &none        &kp RALT     &kp LG(C)      &kp LG(V)     &none    &kp HOME        &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &none         &none
-                                 &none          &none         &none    &kp RET         &kp BSPC       &kp DEL
+&none  &bootloader  &none     &none      &none      &none    &none           &none          &none        &none      &none         &none
+&none  &kp LGUI     &kp LALT  &kp LCTRL  &kp LSHFT  &none    &kp LEFT_ARROW  &kp DOWN       &kp UP       &kp RIGHT  &kp CAPSLOCK  &none
+&none  &none        &kp RALT  &kp LG(C)  &kp LG(V)  &none    &kp HOME        &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &none         &none
+                              &none      &none      &none    &kp RET         &kp BSPC       &kp DEL
             >;
         };
 
         NUM {
             display-name = "Num";
             bindings = <
-&none  &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT     &none  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none  &none
-&none  &kp SEMI   &kp N4  &kp N5   &kp N6  &kp EQUAL    &none  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_N6        &none  &none
-&none  &kp GRAVE  &kp N1  &kp N2   &kp N3  &kp BSLH     &none  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &none  &none
-                          &kp DOT  &kp N0  &kp MINUS    &none  &kp KP_NUMBER_0  &kp KP_DOT
+&none  &none     &none     &none      &none      &none    &none  &kp N7        &kp N8        &kp N9  &none  &none
+&none  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none    &none  &kp N4        &kp N5        &kp N6  &none  &none
+&none  &none     &none     &none      &none      &none    &none  &kp NUMBER_1  &kp NUMBER_2  &kp N3  &none  &none
+                           &none      &none      &none    &none  &kp N0        &kp DOT
             >;
         };
 
         SYM {
             display-name = "Sym";
             bindings = <
-&none  &kp LPAR  &kp RPAR  &kp AT    &kp SEMI   &kp COLON    &kp MINUS  &kp CARET    &kp HASH       &kp PRCNT  &kp TILDE  &none
-&none  &kp LBRC  &kp RBRC  &kp LT    &kp EQUAL  &kp GT       &kp PLUS   &kp LSHFT    &kp LCTRL      &kp LALT   &kp LGUI   &none
-&none  &kp LBKT  &kp RBKT  &kp AMPS  &kp PIPE   &kp EXCL     &kp SLASH  &u_to_U_SYM  &u_to_U_MOUSE  &kp RALT   &none      &none
-                           &kp DLLR  &kp UNDER  &kp ASTRK    &none      &none        &none
+&kp GRAVE  &kp LPAR  &kp RPAR  &kp AT    &kp SEMI   &kp COLON    &kp MINUS  &kp CARET     &kp HASH   &kp PRCNT  &none     &none
+&kp TILDE  &kp LBRC  &kp RBRC  &kp LT    &kp EQUAL  &kp GT       &kp PLUS   &kp LSHFT     &kp LCTRL  &kp LALT   &kp LGUI  &none
+&none      &kp LBKT  &kp RBKT  &kp AMPS  &kp PIPE   &kp EXCL     &none      &kp QUESTION  &none      &kp RALT   &none     &none
+                               &kp DLLR  &kp UNDER  &kp ASTRK    &none      &none         &none
             >;
         };
 
@@ -85,20 +87,7 @@
 };
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        combo_language_switch {
-            timeout-ms = <50>;
-            bindings = <&kp F13>;
-            key-positions = <31 32>;
-        };
-
-        soft-off {
-            bindings = <&soft_off>;
-            key-positions = <0 11>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 };
 
 / {
@@ -114,13 +103,6 @@
 
 / {
     behaviors {
-        u_bt_sel_0: u_bt_sel_0 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&bt BT_SEL 0>, <&u_macro_u_bt_sel_0>;
-
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
     };
 };
 
@@ -137,13 +119,6 @@
 
 / {
     behaviors {
-        u_bt_sel_1: u_bt_sel_1 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&bt BT_SEL 1>, <&u_macro_u_bt_sel_1>;
-
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
     };
 };
 
@@ -160,13 +135,6 @@
 
 / {
     behaviors {
-        u_bt_sel_2: u_bt_sel_2 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&bt BT_SEL 2>, <&u_macro_u_bt_sel_2>;
-
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
     };
 };
 
@@ -183,13 +151,6 @@
 
 / {
     behaviors {
-        u_bt_sel_3: u_bt_sel_3 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&bt BT_SEL 3>, <&u_macro_u_bt_sel_3>;
-
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
     };
 };
 
@@ -206,13 +167,6 @@
 
 / {
     behaviors {
-        u_bt_sel_4: u_bt_sel_4 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&bt BT_SEL 4>, <&u_macro_u_bt_sel_4>;
-
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
     };
 };
 
@@ -242,111 +196,51 @@
 
 / {
     behaviors {
-        u_to_U_BASE: u_to_U_BASE {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&none>, <&to 0>;
-        };
     };
 };
 
 / {
     behaviors {
-        u_to_U_EXTRA: u_to_U_EXTRA {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&none>, <&to 0>;
-        };
     };
 };
 
 / {
     behaviors {
-        u_to_U_TAP: u_to_U_TAP {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&none>, <&to 0>;
-        };
     };
 };
 
 / {
     behaviors {
-        u_to_U_BUTTON: u_to_U_BUTTON {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&none>, <&to 6>;
-        };
     };
 };
 
 / {
     behaviors {
-        u_to_U_NAV: u_to_U_NAV {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&none>, <&to 2>;
-        };
     };
 };
 
 / {
     behaviors {
-        u_to_U_MOUSE: u_to_U_MOUSE {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&none>, <&to 0>;
-        };
     };
 };
 
 / {
     behaviors {
-        u_to_U_MEDIA: u_to_U_MEDIA {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&none>, <&to 1>;
-        };
     };
 };
 
 / {
     behaviors {
-        u_to_U_NUM: u_to_U_NUM {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&none>, <&to 3>;
-        };
     };
 };
 
 / {
     behaviors {
-        u_to_U_SYM: u_to_U_SYM {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&none>, <&to 4>;
-        };
     };
 };
 
 / {
     behaviors {
-        u_to_U_FUN: u_to_U_FUN {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&none>, <&to 0>;
-        };
     };
 };
 

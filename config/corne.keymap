@@ -24,7 +24,7 @@
         MEDIA {
             display-name = "Media";
             bindings = <
-&none  &none         &none         &none         &none         &none           &none              &none            &none            &none            &bt BT_CLR
+&none  &none         &none         &none         &none         &none           &none              &none            &none            &none            &none            &bt BT_CLR
 &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &ext_power EP_TOG  &kp C_PREV       &kp C_VOL_DN     &kp C_VOL_UP     &kp C_NEXT       &bt BT_CLR_ALL
 &none  &u_out_tog    &none         &none         &none         &none           &u_out_tog         &bt BT_SEL 0     &bt BT_SEL 1     &none            &none            &none
                                    &none         &none         &none           &kp C_STOP         &kp C_PP         &kp C_MUTE

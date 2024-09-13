@@ -240,33 +240,21 @@
 
 / {
     macros {
-        u_macro_btn1: u_macro_btn1 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            bindings = <&kp KP_SLASH &kp KP_N5>;
-        };
     };
 };
 
 / {
     macros {
-        u_macro_btn2: u_macro_btn2 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            bindings = <&kp KP_MINUS &kp KP_N5>;
-        };
     };
 };
 
 / {
     macros {
-        u_macro_btn3: u_macro_btn3 {
+        u_screen_capture_select: u_screen_capture_select {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <0>;
-            bindings = <&kp KP_ASTERISK &kp KP_N5>;
+            bindings = <&kp NUMBER_1 &kp B>;
+            label = "U_SCREEN_CAPTURE_SELECT";
         };
     };
 };

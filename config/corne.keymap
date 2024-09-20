@@ -81,6 +81,16 @@
             bindings = <&kp B>;
             key-positions = <30 31>;
         };
+
+        left_boot_loader {
+            bindings = <&bootloader>;
+            key-positions = <24 5>;
+        };
+
+        right_boot_loader {
+            bindings = <&bootloader>;
+            key-positions = <6 35>;
+        };
     };
 };
 

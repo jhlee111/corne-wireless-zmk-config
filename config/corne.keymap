@@ -13,8 +13,17 @@
             bindings = <
 &kp ESCAPE  &kp Q         &kp W         &kp E          &kp R          &kp T            &kp Y          &kp U          &kp I          &kp O         &kp P            &caps_word
 &kp F13     &u_mt LGUI A  &u_mt LALT S  &u_mt LCTRL D  &u_mt LSHFT F  &kp G            &kp H          &u_mt LSHFT J  &u_mt LCTRL K  &u_mt LALT L  &u_mt LGUI SEMI  &kp SINGLE_QUOTE
-&mo 5       &kp Z         &kp X         &kp C          &kp V          &kp B            &kp N          &kp M          &kp COMMA      &kp DOT       &kp SLASH        &kp BACKSLASH
-                                        &u_lt 4 ESC    &u_lt 1 TAB    &u_lt 2 ENTER    &u_lt 3 SPACE  &u_lt 1 BSPC   &u_lt 4 DEL
+&mo 6       &kp Z         &kp X         &kp C          &kp V          &kp B            &kp N          &kp M          &kp COMMA      &kp DOT       &kp SLASH        &kp BACKSLASH
+                                        &u_lt 5 ESC    &u_lt 2 TAB    &u_lt 3 ENTER    &u_lt 4 SPACE  &u_lt 2 BSPC   &u_lt 5 DEL
+            >;
+        };
+
+        win_base {
+            bindings = <
+&trans     &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&kp LANG1  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                           &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
 
@@ -62,10 +71,10 @@
 
         BT {
             bindings = <
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &bt BT_CLR  &trans  &trans  &trans  &trans  &trans
-&trans  &trans        &trans        &trans        &trans        &trans          &trans      &trans  &trans  &trans  &trans  &trans
-&trans  &trans        &trans        &trans        &trans        &trans          &trans      &trans  &trans  &trans  &trans  &trans
-                                    &trans        &trans        &trans          &trans      &trans  &trans
+&trans  &u_mac_bt_0  &bt BT_SEL 1  &u_win_bt_2  &bt BT_SEL 3  &bt BT_SEL 4    &bt BT_CLR  &trans  &trans  &trans  &trans  &trans
+&trans  &trans       &trans        &trans       &trans        &trans          &trans      &trans  &trans  &trans  &trans  &trans
+&trans  &trans       &trans        &trans       &trans        &trans          &trans      &trans  &trans  &trans  &trans  &trans
+                                   &trans       &trans        &trans          &trans      &trans  &trans
             >;
 
             label = "BT";
@@ -255,6 +264,20 @@
             #binding-cells = <0>;
             bindings = <&kp NUMBER_1 &kp B>;
             label = "U_SCREEN_CAPTURE_SELECT";
+        };
+
+        u_win_bt_2: win_bt_2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 1 &bt BT_SEL 2>;
+            label = "WIN_BT_2";
+        };
+
+        u_mac_bt_0: u_mac_bt_0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 0 &bt BT_SEL 0>;
+            label = "U_MAC_BT_0";
         };
     };
 };

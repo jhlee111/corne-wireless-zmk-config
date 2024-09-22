@@ -71,8 +71,8 @@
 
         BT {
             bindings = <
-&trans  &u_mac_bt_0  &bt BT_SEL 1  &u_win_bt_2  &bt BT_SEL 3  &bt BT_SEL 4    &bt BT_CLR  &trans  &trans  &trans  &trans  &trans
-&trans  &trans       &trans        &trans       &trans        &trans          &trans      &trans  &trans  &trans  &trans  &trans
+&trans  &u_mac_bt_0  &bt BT_SEL 1  &u_win_bt_2  &bt BT_SEL 3  &bt BT_SEL 4    &bt BT_CLR  &trans  &trans  &trans  &trans  &to 0
+&trans  &trans       &trans        &trans       &trans        &trans          &trans      &trans  &trans  &trans  &trans  &to 1
 &trans  &trans       &trans        &trans       &trans        &trans          &trans      &trans  &trans  &trans  &trans  &trans
                                    &trans       &trans        &trans          &trans      &trans  &trans
             >;

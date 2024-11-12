@@ -21,10 +21,10 @@
         NAV {
             display-name = "Nav";
             bindings = <
-&none          &bootloader  &none     &none      &none      &none    &kp C_MUTE      &kp C_VOL_DN   &kp C_VOL_UP  &kp C_PREV  &kp C_NEXT  &kp C_PLAY_PAUSE
-&kp CAPS       &kp LGUI     &kp LALT  &kp LCTRL  &kp LSHFT  &none    &kp LEFT_ARROW  &kp DOWN       &kp UP        &kp RIGHT   &none       &none
-&kp LA(LS(Z))  &kp LG(Z)    &kp RALT  &kp LG(C)  &kp LG(V)  &none    &kp HOME        &kp PAGE_DOWN  &kp PAGE_UP   &kp END     &none       &none
-                                      &none      &none      &none    &none           &none          &none
+&none          &kp LG(Q)  &kp LG(W)  &none      &none      &none    &kp C_MUTE      &kp C_VOL_DN   &kp C_VOL_UP  &kp C_PREV  &kp C_NEXT  &kp C_PLAY_PAUSE
+&kp CAPS       &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &none    &kp LEFT_ARROW  &kp DOWN       &kp UP        &kp RIGHT   &none       &none
+&kp LA(LS(Z))  &kp LG(Z)  &kp RALT   &kp LG(C)  &kp LG(V)  &none    &kp HOME        &kp PAGE_DOWN  &kp PAGE_UP   &kp END     &none       &none
+                                     &none      &none      &none    &none           &none          &none
             >;
         };
 
@@ -62,7 +62,7 @@
 
         BT {
             bindings = <
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &bt BT_CLR  &trans  &trans  &trans  &trans  &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &bt BT_CLR  &trans  &trans  &trans  &trans  &soft_off
 &trans  &trans        &trans        &trans        &trans        &trans          &trans      &trans  &trans  &trans  &trans  &trans
 &trans  &trans        &trans        &trans        &trans        &trans          &trans      &trans  &trans  &trans  &trans  &trans
                                     &trans        &trans        &trans          &trans      &trans  &trans

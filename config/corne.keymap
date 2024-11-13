@@ -253,7 +253,7 @@
         u_screen_capture_select: u_screen_capture_select {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp NUMBER_1 &kp B>;
+            bindings = <&kp LS(LG(NUMBER_4))>;
             label = "U_SCREEN_CAPTURE_SELECT";
         };
     };

@@ -280,10 +280,10 @@
             label = "U_MAC_BT_0";
         };
 
-        cmd_ctrl_z: cmd_ctrl_z {
+        u_cmd_shift_z: cmd_ctrl_z {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LG(LC(Z))>;
+            bindings = <&kp LG(LS(Z))>;
             label = "CMD_CTRL_Z";
         };
     };
@@ -311,7 +311,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_CW_WHISPER";
             #binding-cells = <0>;
-            bindings = <&caps_word>, <&cmd_ctrl_z>;
+            bindings = <&caps_word>, <&u_cmd_shift_z>;
         };
     };
 };

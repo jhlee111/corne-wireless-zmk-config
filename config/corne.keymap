@@ -60,10 +60,10 @@
         FUN {
             display-name = "Fun";
             bindings = <
-&kp F1                    &kp F2  &kp F3  &kp F4   &kp F5   &kp F6     &none  &none      &none      &none     &none     &none
-&kp F7                    &kp F8  &kp F9  &kp F10  &kp F11  &kp F12    &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &none
-&u_screen_capture_select  &none   &none   &none    &none    &none      &none  &none      &none      &none     &none     &soft_off
-                                          &none    &none    &none      &none  &none      &none
+&kp F1                    &kp F2  &kp F3  &kp F4   &kp F5   &kp F6     &kp LS(LG(NUMBER_3))  &kp LS(LG(NUMBER_4))      &kp LS(LG(NUMBER_5))        &none                 &none     &none
+&kp F7                    &kp F8  &kp F9  &kp F10  &kp F11  &kp F12    &kp LC(LEFT_ARROW)    &u_mt LSHFT LC(UP_ARROW)  &u_mt LCTRL LC(DOWN_ARROW)  &u_mt LALT LC(RIGHT)  &kp LGUI  &none
+&u_screen_capture_select  &none   &none   &none    &none    &none      &none                 &kp LC(LA(LEFT_ARROW))    &kp LC(LA(RIGHT))           &none                 &none     &soft_off
+                                          &none    &none    &none      &none                 &none                     &none
             >;
 
             label = "Function";

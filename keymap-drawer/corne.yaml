@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: corne}
 layers:
   Base:
-  - Esc
+  - {t: Esc, type: word}
   - Q
   - W
   - E
@@ -12,8 +12,8 @@ layers:
   - I
   - O
   - P
-  - {t: CapsWord, s: '2x: ⌘⇧Z'}
-  - F13
+  - {t: CapsWord, s: '2x: ⌘⇧Z', type: word}
+  - {t: F13, type: word}
   - {t: A, h: ⌘}
   - {t: S, h: ⌥}
   - {t: D, h: Ctrl}
@@ -37,7 +37,7 @@ layers:
   - .
   - /
   - \
-  - {t: Esc, h: Fun}
+  - {t: Esc, h: Fun, type: word}
   - {t: ⇥, h: Nav}
   - {t: ⏎, h: Num}
   - {t: ␣, h: Sym}
@@ -56,7 +56,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - AltGr
+  - {t: AltGr, type: word}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -88,21 +88,21 @@ layers:
   - {t: ▽, type: trans}
   Nav:
   - ''
-  - Boot
+  - {t: Boot, type: word}
   - ''
   - ''
   - ''
   - ''
-  - Mute
-  - Vol-
-  - Vol+
-  - Prev
-  - Next
-  - Play
-  - Caps
+  - {t: Mute, type: word}
+  - {t: Vol-, type: word}
+  - {t: Vol+, type: word}
+  - {t: Prev, type: word}
+  - {t: Next, type: word}
+  - {t: Play, type: word}
+  - {t: Caps, type: word}
   - ⌘
   - ⌥
-  - Ctrl
+  - {t: Ctrl, type: word}
   - ⇧
   - ''
   - ←
@@ -113,14 +113,14 @@ layers:
   - ''
   - ⌥⇧Z
   - ⌘Z
-  - AltGr
+  - {t: AltGr, type: word}
   - ⌘C
   - ⌘V
   - ''
-  - Home
-  - PgDn
-  - PgUp
-  - End
+  - {t: Home, type: word}
+  - {t: PgDn, type: word}
+  - {t: PgUp, type: word}
+  - {t: End, type: word}
   - ''
   - ''
   - ''
@@ -145,7 +145,7 @@ layers:
   - ''
   - ⌘
   - ⌥
-  - Ctrl
+  - {t: Ctrl, type: word}
   - ⇧
   - ''
   - '-'
@@ -193,7 +193,7 @@ layers:
   - '{'
   - '}'
   - ⇧
-  - Ctrl
+  - {t: Ctrl, type: word}
   - ⌥
   - ⌘
   - ''
@@ -206,7 +206,7 @@ layers:
   - ']'
   - ''
   - ''
-  - AltGr
+  - {t: AltGr, type: word}
   - '?'
   - ''
   - $
@@ -216,73 +216,73 @@ layers:
   - ''
   - ''
   Fun:
-  - F1
-  - F2
-  - F3
-  - F4
-  - F5
-  - F6
+  - {t: F1, type: word}
+  - {t: F2, type: word}
+  - {t: F3, type: word}
+  - {t: F4, type: word}
+  - {t: F5, type: word}
+  - {t: F6, type: word}
   - ⇧⌘3
   - ⇧⌘4
   - ⇧⌘5
   - ''
   - ''
   - ''
-  - F7
-  - F8
-  - F9
-  - F10
-  - F11
-  - F12
-  - Ctrl←
-  - {t: Ctrl↑, h: ⇧}
-  - {t: Ctrl↓, h: Ctrl}
-  - {t: Ctrl→, h: ⌥}
+  - {t: F7, type: word}
+  - {t: F8, type: word}
+  - {t: F9, type: word}
+  - {t: F10, type: word}
+  - {t: F11, type: word}
+  - {t: F12, type: word}
+  - ⌃←
+  - {t: ⌃↑, h: ⇧}
+  - {t: ⌃↓, h: Ctrl}
+  - {t: ⌃→, h: ⌥}
   - ⌘
   - ''
-  - Capture
+  - {t: Capture, type: word}
   - ''
   - ''
   - ''
   - ''
   - ''
   - ''
-  - Ctrl⌥←
-  - Ctrl⌥→
+  - ⌃⌥←
+  - ⌃⌥→
   - ''
   - ''
-  - 'Off'
+  - {t: 'Off', type: word}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
   - {type: held}
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
   BT:
   - {t: ▽, type: trans}
-  - {t: BT0, s: Mac}
-  - BT1
-  - {t: BT2, s: Win}
-  - BT3
-  - BT4
-  - BT Clear
+  - {t: BT0, s: Mac, type: word}
+  - {t: BT1, type: word}
+  - {t: BT2, s: Win, type: word}
+  - {t: BT3, type: word}
+  - {t: BT4, type: word}
+  - {t: BT Clear, type: word}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: Mac, s: layer}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: Mac, s: layer, type: word}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: Win, s: layer}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: Win, s: layer, type: word}
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}

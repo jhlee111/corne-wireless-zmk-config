@@ -1,0 +1,307 @@
+layout: {zmk_keyboard: corne}
+layers:
+  Base:
+  - Esc
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - {t: CapsWord, s: '2x: ⌘⇧Z'}
+  - F13
+  - {t: A, h: ⌘}
+  - {t: S, h: ⌥}
+  - {t: D, h: ⌃}
+  - {t: F, h: ⇧}
+  - G
+  - H
+  - {t: J, h: ⇧}
+  - {t: K, h: ⌃}
+  - {t: L, h: ⌥}
+  - {t: ;, h: ⌘}
+  - ''''
+  - BT
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - \
+  - {t: Esc, h: Fun}
+  - {t: ⇥, h: Nav}
+  - {t: ⏎, h: Num}
+  - {t: ␣, h: Sym}
+  - {t: ⌫, h: Nav}
+  - {t: ⌦, h: Fun}
+  Win:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - AltGr
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  Nav:
+  - ''
+  - Boot
+  - ''
+  - ''
+  - ''
+  - ''
+  - Mute
+  - Vol-
+  - Vol+
+  - Prev
+  - Next
+  - Play
+  - Caps
+  - ⌘
+  - ⌥
+  - ⌃
+  - ⇧
+  - ''
+  - ←
+  - ↓
+  - ↑
+  - →
+  - ''
+  - ''
+  - ⌥⇧Z
+  - ⌘Z
+  - AltGr
+  - ⌘C
+  - ⌘V
+  - ''
+  - Home
+  - PgDn
+  - PgUp
+  - End
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - ''
+  - ''
+  - ''
+  - ''
+  Num:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - '7'
+  - '8'
+  - '9'
+  - '*'
+  - ''
+  - ''
+  - ⌘
+  - ⌥
+  - ⌃
+  - ⇧
+  - ''
+  - '-'
+  - '4'
+  - '5'
+  - '6'
+  - +
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - '1'
+  - '2'
+  - '3'
+  - /
+  - ⏎
+  - ''
+  - ''
+  - {type: held}
+  - ''
+  - '0'
+  - .
+  Sym:
+  - TILDE
+  - PERCENT
+  - ASTRK
+  - MINUS
+  - PLUS
+  - LPAR
+  - RIGHT PARENTHESIS
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - GRAVE
+  - AT SIGN
+  - LESS THAN
+  - EQUAL
+  - GREATER THAN
+  - LEFT BRACE
+  - RIGHT BRACE
+  - ⇧
+  - ⌃
+  - ⌥
+  - ⌘
+  - ''
+  - POUND
+  - CARET
+  - AMPERSAND
+  - PIPE
+  - EXCL
+  - LEFT BRACKET
+  - RIGHT BRACKET
+  - ''
+  - ''
+  - AltGr
+  - QUESTION
+  - ''
+  - DLLR
+  - UNDER
+  - COLON
+  - {type: held}
+  - ''
+  - ''
+  Fun:
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - F6
+  - ⇧⌘3
+  - ⇧⌘4
+  - ⇧⌘5
+  - ''
+  - ''
+  - ''
+  - F7
+  - F8
+  - F9
+  - F10
+  - F11
+  - F12
+  - ⌃←
+  - {t: ⌃↑, h: ⇧}
+  - {t: ⌃↓, h: ⌃}
+  - {t: ⌃→, h: ⌥}
+  - ⌘
+  - ''
+  - Capture
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ⌃⌥←
+  - ⌃⌥→
+  - ''
+  - ''
+  - 'Off'
+  - {type: held}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  BT:
+  - {t: ▽, type: trans}
+  - {t: BT0, s: Mac}
+  - BT1
+  - {t: BT2, s: Win}
+  - BT3
+  - BT4
+  - BT Clear
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: Mac, s: layer}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: Win, s: layer}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+combos:
+- p: [30, 31]
+  k: B
+  l: [Base]

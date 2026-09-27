@@ -3,8 +3,8 @@
 parse_config:
   # macOS 기호로 모디파이어 표시
   modifier_fn_map:
-    left_ctrl: Ctrl
-    right_ctrl: Ctrl
+    left_ctrl: "⌃"
+    right_ctrl: "⌃"
     left_shift: "⇧"
     right_shift: "⇧"
     left_alt: "⌥"
@@ -17,20 +17,20 @@ parse_config:
     LGUI: "⌘"
     RGUI: "⌘"
     LALT: "⌥"
-    RALT: "AltGr"
-    LCTRL: Ctrl
-    RCTRL: Ctrl
+    RALT: {t: AltGr, type: word}
+    LCTRL: {t: Ctrl, type: word}
+    RCTRL: {t: Ctrl, type: word}
     LSHFT: "⇧"
     RSHFT: "⇧"
-    ESCAPE: Esc
-    ESC: Esc
+    ESCAPE: {t: Esc, type: word}
+    ESC: {t: Esc, type: word}
     ENTER: "⏎"
     SPACE: "␣"
     BSPC: "⌫"
     BACKSPACE: "⌫"
     DEL: "⌦"
     TAB: "⇥"
-    CAPS: Caps
+    CAPS: {t: Caps, type: word}
     LEFT_ARROW: "←"
     LEFT: "←"
     RIGHT: "→"
@@ -39,14 +39,14 @@ parse_config:
     UP: "↑"
     DOWN_ARROW: "↓"
     DOWN: "↓"
-    PAGE_UP: PgUp
-    PAGE_DOWN: PgDn
-    C_MUTE: Mute
-    C_VOL_DN: Vol-
-    C_VOL_UP: Vol+
-    C_PREV: Prev
-    C_NEXT: Next
-    C_PLAY_PAUSE: Play
+    PAGE_UP: {t: PgUp, type: word}
+    PAGE_DOWN: {t: PgDn, type: word}
+    C_MUTE: {t: Mute, type: word}
+    C_VOL_DN: {t: Vol-, type: word}
+    C_VOL_UP: {t: Vol+, type: word}
+    C_PREV: {t: Prev, type: word}
+    C_NEXT: {t: Next, type: word}
+    C_PLAY_PAUSE: {t: Play, type: word}
     KP_MULTIPLY: "*"
     KP_PLUS: "+"
     KP_MINUS: "-"
@@ -58,8 +58,8 @@ parse_config:
     DOT: "."
     SLASH: /
     BACKSLASH: '\'
-    HOME: Home
-    END: End
+    HOME: {t: Home, type: word}
+    END: {t: End, type: word}
     # keymap-drawer 기본 기호 매핑 (이 맵을 정의하면 기본값이 통째로 대체되므로 함께 둔다)
     AMPERSAND: '&'
     AMPS: '&'
@@ -119,22 +119,54 @@ parse_config:
     TILDE2: '~'
     UNDER: '_'
     UNDERSCORE: '_'
+    F1: {t: F1, type: word}
+    F2: {t: F2, type: word}
+    F3: {t: F3, type: word}
+    F4: {t: F4, type: word}
+    F5: {t: F5, type: word}
+    F6: {t: F6, type: word}
+    F7: {t: F7, type: word}
+    F8: {t: F8, type: word}
+    F9: {t: F9, type: word}
+    F10: {t: F10, type: word}
+    F11: {t: F11, type: word}
+    F12: {t: F12, type: word}
+    F13: {t: F13, type: word}
+    F14: {t: F14, type: word}
+    F15: {t: F15, type: word}
+    F16: {t: F16, type: word}
+    F17: {t: F17, type: word}
+    F18: {t: F18, type: word}
+    F19: {t: F19, type: word}
+    F20: {t: F20, type: word}
+    F21: {t: F21, type: word}
+    F22: {t: F22, type: word}
+    F23: {t: F23, type: word}
+    F24: {t: F24, type: word}
   raw_binding_map:
-    "&td_cw_whisper": {t: CapsWord, s: "2x: ⌘⇧Z"}
+    # hold-tap 은 tap 쪽 type 을 버리므로 직접 지정
+    "&u_lt 5 ESC": {t: Esc, h: Fun, type: word}
+    "&td_cw_whisper": {t: CapsWord, s: "2x: ⌘⇧Z", type: word}
     "&u_cmd_shift_z": "⌘⇧Z"
-    "&u_mac_bt_0": {t: BT0, s: Mac}
-    "&u_win_bt_2": {t: BT2, s: Win}
-    "&u_screen_capture_select": Capture
-    "&soft_off": "Off"
-    "&bootloader": Boot
-    "&bt BT_CLR": BT Clear
-    "&bt BT_SEL 1": BT1
-    "&bt BT_SEL 3": BT3
-    "&bt BT_SEL 4": BT4
-    "&to 0": {t: Mac, s: layer}
-    "&to 1": {t: Win, s: layer}
+    "&u_mac_bt_0": {t: BT0, s: Mac, type: word}
+    "&u_win_bt_2": {t: BT2, s: Win, type: word}
+    "&u_screen_capture_select": {t: Capture, type: word}
+    "&soft_off": {t: "Off", type: word}
+    "&bootloader": {t: Boot, type: word}
+    "&bt BT_CLR": {t: BT Clear, type: word}
+    "&bt BT_SEL 1": {t: BT1, type: word}
+    "&bt BT_SEL 3": {t: BT3, type: word}
+    "&bt BT_SEL 4": {t: BT4, type: word}
+    "&to 0": {t: Mac, s: layer, type: word}
+    "&to 1": {t: Win, s: layer, type: word}
   zmk_combos:
     b_key_from_right: {l: [Base]}
 draw_config:
   key_h: 60
+  # 9자 이상은 잘라내고, 6자 이상은 자동 축소
+  shrink_wide_legends: 5
+  # 기호·한 글자 키는 크게, type: word 로 표시한 단어 키는 작게
+  svg_extra_style: |
+    text.tap { font-size: 18px; }
+    text.tap.word { font-size: 12px; }
   dark_mode: auto

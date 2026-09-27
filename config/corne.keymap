@@ -4,6 +4,11 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
+// Key positions (0-41)
+#define LEFT_KEYS 0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29
+#define RIGHT_KEYS 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35
+#define THUMB_KEYS 36 37 38 39 40 41
+
 / {
     keymap {
         compatible = "zmk,keymap";
@@ -12,7 +17,7 @@
             display-name = "Base";
             bindings = <
 &kp ESCAPE  &kp Q         &kp W         &kp E          &kp R          &kp T            &kp Y          &kp U          &kp I          &kp O         &kp P            &td_cw_whisper
-&kp F13     &u_mt LGUI A  &u_mt LALT S  &u_mt LCTRL D  &u_mt LSHFT F  &kp G            &kp H          &u_mt LSHFT J  &u_mt LCTRL K  &u_mt LALT L  &u_mt LGUI SEMI  &kp SINGLE_QUOTE
+&kp F13     &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G            &kp H          &hmr LSHFT J  &hmr LCTRL K  &hmr LALT L  &hmr LGUI SEMI  &kp SINGLE_QUOTE
 &mo 6       &kp Z         &kp X         &kp C          &kp V          &kp B            &kp N          &kp M          &kp COMMA      &kp DOT       &kp SLASH        &kp BACKSLASH
                                         &u_lt 5 ESC    &u_lt 2 TAB    &u_lt 3 ENTER    &u_lt 4 SPACE  &u_lt 2 BSPC   &u_lt 5 DEL
             >;
@@ -62,7 +67,7 @@
             display-name = "Fun";
             bindings = <
 &kp F1                    &kp F2  &kp F3  &kp F4   &kp F5   &kp F6     &kp LS(LG(NUMBER_3))  &kp LS(LG(NUMBER_4))      &kp LS(LG(NUMBER_5))        &none                 &none     &none
-&kp F7                    &kp F8  &kp F9  &kp F10  &kp F11  &kp F12    &kp LC(LEFT_ARROW)    &u_mt LSHFT LC(UP_ARROW)  &u_mt LCTRL LC(DOWN_ARROW)  &u_mt LALT LC(RIGHT)  &kp LGUI  &none
+&kp F7                    &kp F8  &kp F9  &kp F10  &kp F11  &kp F12    &kp LC(LEFT_ARROW)    &hmr LSHFT LC(UP_ARROW)  &hmr LCTRL LC(DOWN_ARROW)  &hmr LALT LC(RIGHT)  &kp LGUI  &none
 &u_screen_capture_select  &none   &none   &none    &none    &none      &none                 &kp LC(LA(LEFT_ARROW))    &kp LC(LA(RIGHT))           &none                 &none     &soft_off
                                           &none    &none    &none      &none                 &none                     &none
             >;
@@ -121,11 +126,29 @@
 
 / {
     behaviors {
-        u_mt: u_mt {
+        // Home row mods: 반대 손 키(+엄지)를 눌러야만 hold 로 인정,
+        // 타이핑 도중(직전 입력 150ms 이내)에는 무조건 tap.
+        hml: hml {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            hold-trigger-key-positions = <RIGHT_KEYS THUMB_KEYS>;
+            hold-trigger-on-release;
+            bindings = <&kp>, <&kp>;
+        };
+
+        hmr: hmr {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            hold-trigger-key-positions = <LEFT_KEYS THUMB_KEYS>;
+            hold-trigger-on-release;
             bindings = <&kp>, <&kp>;
         };
 
@@ -134,6 +157,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
+            quick-tap-ms = <175>;
             bindings = <&mo>, <&kp>;
         };
 

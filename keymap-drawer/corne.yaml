@@ -173,45 +173,45 @@ layers:
   - '0'
   - .
   Sym:
-  - TILDE
-  - PERCENT
-  - ASTRK
-  - MINUS
-  - PLUS
-  - LPAR
-  - RIGHT PARENTHESIS
+  - '~'
+  - '%'
+  - '*'
+  - '-'
+  - +
+  - (
+  - )
   - ''
   - ''
   - ''
   - ''
   - ''
-  - GRAVE
-  - AT SIGN
-  - LESS THAN
-  - EQUAL
-  - GREATER THAN
-  - LEFT BRACE
-  - RIGHT BRACE
+  - '`'
+  - '@'
+  - <
+  - '='
+  - '>'
+  - '{'
+  - '}'
   - ⇧
   - ⌃
   - ⌥
   - ⌘
   - ''
-  - POUND
-  - CARET
-  - AMPERSAND
-  - PIPE
-  - EXCL
-  - LEFT BRACKET
-  - RIGHT BRACKET
+  - '#'
+  - ^
+  - '&'
+  - '|'
+  - '!'
+  - '['
+  - ']'
   - ''
   - ''
   - AltGr
-  - QUESTION
+  - '?'
   - ''
-  - DLLR
-  - UNDER
-  - COLON
+  - $
+  - _
+  - ':'
   - {type: held}
   - ''
   - ''

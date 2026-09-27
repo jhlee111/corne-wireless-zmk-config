@@ -3,8 +3,8 @@
 parse_config:
   # macOS 기호로 모디파이어 표시
   modifier_fn_map:
-    left_ctrl: "⌃"
-    right_ctrl: "⌃"
+    left_ctrl: Ctrl
+    right_ctrl: Ctrl
     left_shift: "⇧"
     right_shift: "⇧"
     left_alt: "⌥"
@@ -18,8 +18,8 @@ parse_config:
     RGUI: "⌘"
     LALT: "⌥"
     RALT: "AltGr"
-    LCTRL: "⌃"
-    RCTRL: "⌃"
+    LCTRL: Ctrl
+    RCTRL: Ctrl
     LSHFT: "⇧"
     RSHFT: "⇧"
     ESCAPE: Esc

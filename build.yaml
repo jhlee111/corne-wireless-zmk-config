@@ -1,20 +1,44 @@
 # This file generates the GitHub Actions matrix
-# For simple board + shield combinations, add them
-# to the top level board and shield arrays, for more
-# control, add individual board + shield combinations to
-# the `include` property, e.g:
 #
-# board: [ "nice_nano_v2" ]
-# shield: [ "corne_left", "corne_right" ]
-# include:
-#   - board: bdn9_rev2
-#   - board: nice_nano_v2
-#     shield: reviung41
+# 키맵(config/corne.keymap)과 설정(config/corne.conf)은 모든 키보드가 공유한다.
+# 키보드마다 다른 것은 아래 항목에서만 지정한다:
+#   - shield:        디스플레이 종류 (nice!view 는 nice_view_adapter nice_view 추가)
+#   - cmake-args:    블루투스 이름 (CONFIG_ZMK_KEYBOARD_NAME, 최대 16자)
+#   - artifact-name: 결과 .uf2 파일 이름
 #
+# 새 키보드 추가 = left/right 두 항목을 복사해서 이름만 바꾸면 된다.
+# 이름은 central(왼쪽)이 광고하지만, 헷갈리지 않게 오른쪽에도 같이 넣는다.
 ---
 include:
+  # ---- mint (nice!view) ----
   - board: nice_nano_v2
     shield: corne_left nice_view_adapter nice_view
     snippet: studio-rpc-usb-uart
+    cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"mint_corne\"
+    artifact-name: mint_corne_left
   - board: nice_nano_v2
     shield: corne_right nice_view_adapter nice_view
+    cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"mint_corne\"
+    artifact-name: mint_corne_right
+
+  # ---- brown (OLED) ----
+  - board: nice_nano_v2
+    shield: corne_left
+    snippet: studio-rpc-usb-uart
+    cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"brown_corne\"
+    artifact-name: brown_corne_left
+  - board: nice_nano_v2
+    shield: corne_right
+    cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"brown_corne\"
+    artifact-name: brown_corne_right
+
+  # ---- blue (OLED) ----
+  - board: nice_nano_v2
+    shield: corne_left
+    snippet: studio-rpc-usb-uart
+    cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"blue_corne\"
+    artifact-name: blue_corne_left
+  - board: nice_nano_v2
+    shield: corne_right
+    cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"blue_corne\"
+    artifact-name: blue_corne_right

@@ -146,6 +146,7 @@ parse_config:
   raw_binding_map:
     # hold-tap 은 tap 쪽 type 을 버리므로 직접 지정
     "&u_lt 5 ESC": {t: Esc, h: Fun, type: word}
+    "&mo 6": {t: BT, type: word}
     "&td_cw_whisper": {t: CapsWord, s: "2x: ⌘⇧Z", type: word}
     "&u_cmd_shift_z": "⌘⇧Z"
     "&u_mac_bt_0": {t: BT0, s: Mac, type: word}

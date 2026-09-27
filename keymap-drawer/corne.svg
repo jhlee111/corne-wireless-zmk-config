@@ -246,10 +246,10 @@ text.tap.word { font-size: 12px; }
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
 <text x="0" y="0" class="key tap">&#x27;</text>
 </g>
-<g transform="translate(30, 172)" class="key keypos-24">
-<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
+<g transform="translate(30, 172)" class="key word keypos-24">
+<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key word"/>
 <a href="#BT">
-<text x="0" y="0" class="key tap layer-activator">BT</text>
+<text x="0" y="0" class="key word tap layer-activator">BT</text>
 </a></g>
 <g transform="translate(90, 172)" class="key keypos-25">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
@@ -1243,8 +1243,9 @@ text.tap.word { font-size: 12px; }
 <text x="0" y="0" class="key word tap layer-activator">Win</text>
 </a><text x="0" y="-26" class="key word shifted">layer</text>
 </g>
-<g transform="translate(30, 172)" class="key held keypos-24">
-<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key held"/>
+<g transform="translate(30, 172)" class="key trans keypos-24">
+<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
+<text x="0" y="0" class="key trans tap">▽</text>
 </g>
 <g transform="translate(90, 172)" class="key trans keypos-25">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>

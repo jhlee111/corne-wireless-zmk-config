@@ -25,7 +25,7 @@ layers:
   - {t: L, h: ⌥}
   - {t: ;, h: ⌘}
   - ''''
-  - BT
+  - {t: BT, type: word}
   - Z
   - X
   - C
@@ -283,7 +283,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: Win, s: layer, type: word}
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}

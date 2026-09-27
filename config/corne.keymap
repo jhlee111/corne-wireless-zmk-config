@@ -92,6 +92,7 @@
         b_key_from_right {
             bindings = <&kp B>;
             key-positions = <30 31>;
+            require-prior-idle-ms = <150>;
         };
     };
 };

@@ -1,0 +1,81 @@
+# keymap-drawer 설정 — .github/workflows/draw.yml 이 keymap-drawer/corne.svg 를 그린다.
+# 기본값은 `keymap dump-config` 참고. 여기엔 바꾼 것만 둔다.
+parse_config:
+  # macOS 기호로 모디파이어 표시
+  modifier_fn_map:
+    left_ctrl: "⌃"
+    right_ctrl: "⌃"
+    left_shift: "⇧"
+    right_shift: "⇧"
+    left_alt: "⌥"
+    right_alt: "AltGr"
+    left_gui: "⌘"
+    right_gui: "⌘"
+    keycode_combiner: "{mods}{key}"
+    mod_combiner: "{mod_1}{mod_2}"
+  zmk_keycode_map:
+    LGUI: "⌘"
+    RGUI: "⌘"
+    LALT: "⌥"
+    RALT: "AltGr"
+    LCTRL: "⌃"
+    RCTRL: "⌃"
+    LSHFT: "⇧"
+    RSHFT: "⇧"
+    ESCAPE: Esc
+    ESC: Esc
+    ENTER: "⏎"
+    SPACE: "␣"
+    BSPC: "⌫"
+    BACKSPACE: "⌫"
+    DEL: "⌦"
+    TAB: "⇥"
+    CAPS: Caps
+    LEFT_ARROW: "←"
+    LEFT: "←"
+    RIGHT: "→"
+    RIGHT_ARROW: "→"
+    UP_ARROW: "↑"
+    UP: "↑"
+    DOWN_ARROW: "↓"
+    DOWN: "↓"
+    PAGE_UP: PgUp
+    PAGE_DOWN: PgDn
+    C_MUTE: Mute
+    C_VOL_DN: Vol-
+    C_VOL_UP: Vol+
+    C_PREV: Prev
+    C_NEXT: Next
+    C_PLAY_PAUSE: Play
+    KP_MULTIPLY: "*"
+    KP_PLUS: "+"
+    KP_MINUS: "-"
+    KP_DIVIDE: /
+    KP_ENTER: "⏎"
+    SEMI: ";"
+    SINGLE_QUOTE: "'"
+    COMMA: ","
+    DOT: "."
+    SLASH: /
+    BACKSLASH: '\'
+    HOME: Home
+    END: End
+  raw_binding_map:
+    "&td_cw_whisper": {t: CapsWord, s: "2x: ⌘⇧Z"}
+    "&u_cmd_shift_z": "⌘⇧Z"
+    "&u_mac_bt_0": {t: BT0, s: Mac}
+    "&u_win_bt_2": {t: BT2, s: Win}
+    "&u_screen_capture_select": Capture
+    "&soft_off": "Off"
+    "&bootloader": Boot
+    "&bt BT_CLR": BT Clear
+    "&bt BT_SEL 1": BT1
+    "&bt BT_SEL 3": BT3
+    "&bt BT_SEL 4": BT4
+    "&to 0": {t: Mac, s: layer}
+    "&to 1": {t: Win, s: layer}
+  zmk_combos:
+    b_key_from_right: {l: [Base]}
+draw_config:
+  key_h: 60
+  dark_mode: auto
